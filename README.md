@@ -11,7 +11,6 @@ lazy box is developed for setting up the good testing  environment for infosec p
 - JSParser
 - knockpy
 - Autocon
-- Sublist3r
 - the_s3_bucketers
 - wpscan
 - Massdns
