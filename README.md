@@ -10,7 +10,6 @@ lazy box is developed for setting up the good testing  environment for infosec p
 - JSParser
 - knockpy
 - Autocon
-- Sublist3r
 - the_s3_bucketers
 - wpscan
 - Massdns
@@ -32,10 +31,10 @@ lazy box is developed for setting up the good testing  environment for infosec p
 
 ### Git
 ```
-- git clone https://github.com/arhaxor21/lazybox.git
-- cd lazybox/
-- chmod +x lazybox.sh
-- ./lazybox.sh
+git clone https://github.com/arhaxor21/lazybox.git
+cd lazybox/
+chmod +x lazybox.sh
+./lazybox.sh
 
 ```
 
