@@ -4,7 +4,6 @@ lazy box is developed for setting up the good testing  environment for infosec p
 # Tools
 
 - BruteList
-- Sublist3r
 - Arjun
 - dirsearch
 - gobuster
