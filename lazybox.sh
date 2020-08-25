@@ -17,6 +17,11 @@ banner() {
 	echo "+------------------------------------------+"
 }
 
+banner " User Name "
+read word
+echo " $words " > /etc/hostname
+echo " Wait for a minutes"
+
 banner " setting up source file for kali"
 
 echo "deb-src https://http.kali.org/kali kali-rolling main non-free contrib" >/etc/apt/sources.list
@@ -74,8 +79,10 @@ echo "All the libaries and pre tools are downloaded and installed"
 banner "installing automaated .bashrc for your linux"
 git clone https://github.com/arhaxor21/Autocon.git
 cd Autocon/
-cat >/root/.bashrc
+cat bashrc > ~/.bashrc
+cat zshrc > ~/.zshrc
 source ~/.bashrc
+source ~/.zshrc
 echo "Successfully configured the all your alias"
 
 banner "Creating a directory for installing tools"
@@ -90,9 +97,9 @@ sudo mv go /usr/loca
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-echo 'export GOROOT=/usr/local/go' >>~/.bashrc
-echo 'export GOPATH=$HOME/go' >>~/.bashrc
-echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >>~/.bashrc
+echo 'export GOROOT=/usr/local/go' >>~/.zshrc
+echo 'export GOPATH=$HOME/go' >>~/.zshrc
+echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >>~/.zshrc
 source ~/.bashrc
 
 echo "golang added successfully -- setup the credentials"
@@ -197,6 +204,8 @@ echo "done"
 banner "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 echo "done"
+
+banner ""
 
 banner "installing XSS-striker"
 git clone https://github.com/s0md3v/XSStrike.git
