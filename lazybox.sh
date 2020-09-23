@@ -17,10 +17,6 @@ banner() {
 	echo "+------------------------------------------+"
 }
 
-banner " User Name "
-read word
-echo " $words " > /etc/hostname
-echo " Wait for a minutes"
 
 banner " setting up source file for kali"
 
