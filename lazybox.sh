@@ -53,6 +53,7 @@ sudo apt install Sublist3r
 sudo apt install gobuster
 sudo apt install ipcalc
 sudo apt install gedit
+sudo apt install speedtest-cli
 sudo apt install htop
 sudo apt install libcurl4-openssl-dev
 sudo apt install libssl-dev
