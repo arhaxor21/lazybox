@@ -70,6 +70,7 @@ sudo apt install apache2
 sudo apt install tor
 sudo apt install macchanger
 sudo apt install awscli
+sudo apt install golang
 
 echo "All the libaries and pre tools are downloaded and installed"
 
@@ -87,25 +88,18 @@ mkdir ~/recon/
 cd ~/recon/
 echo "recon is your directory that will store your tools"
 
-banner "setting up golang for your linux"
-wget https://dl.google.com/go/go1.13.4.linux-amd64.tar.gz
-sudo tar -xvf go1.13.4.linux-amd64.tar.gz
-sudo mv go /usr/loca
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
-echo 'export GOROOT=/usr/local/go' >>~/.zshrc
-echo 'export GOPATH=$HOME/go' >>~/.zshrc
-echo 'export PATH=$GOPATH/bin:$GOROOT/bin:$PATH' >>~/.zshrc
-source ~/.bashrc
-
-echo "golang added successfully -- setup the credentials"
-
 banner "downloading Brutelist"
 cd ~/recon/
 git clone https://github.com/arhaxor21/BruteList.git
 cd ~/recon/
 echo "done"
+
+banner "Sublime-text"
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+sudo apt-get update
+sudo apt-get install sublime-text
 
 
 banner "installing Arjun"
@@ -202,23 +196,9 @@ banner "installing crtndstry"
 git clone https://github.com/nahamsec/crtndstry.git
 echo "done"
 
-banner ""
-
 banner "installing XSS-striker"
 git clone https://github.com/s0md3v/XSStrike.git
 cd XSStrike/
 pip install -r requirements.txt
 cd ~/recon/
 echo "done"
-
-banner "installing Ngrok and geckodriver"
-cd ~/Lazybox/Drivers/
-mv geckodriver ngrok /usr/bin/
-
-echo "Ngrok and geckodriver added"
-
-echo "enter your ngrok authtoken"
-read words
-ngrok authtoken $words
-
-banner "your linux is ready"
