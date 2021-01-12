@@ -43,13 +43,10 @@ banner "updating linux and packages"
 sudo apt update
 sudo apt upgrade
 sudo apt install python3-pip
-sudo apt install python-pip
-sudo apt install python-dnspython
 sudo apt install git
 sudo apt install leafpad
 sudo apt install dnsmap
 sudo apt install ipcalc
-sudo apt install Sublist3r
 sudo apt install gobuster
 sudo apt install ipcalc
 sudo apt install gedit
@@ -61,7 +58,6 @@ sudo apt install jq
 sudo apt install ruby-full
 sudo apt install libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
 sudo apt install build-essential libssl-dev libffi-dev python-dev
-sudo apt install python-setuprecon
 sudo apt install libldns-dev
 sudo apt install rename
 sudo apt install xargs
