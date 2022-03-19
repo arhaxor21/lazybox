@@ -40,33 +40,41 @@ echo "Resolv config added"
 
 banner "updating linux and packages"
 
-sudo apt update
-sudo apt upgrade
-sudo apt install python3-pip
-sudo apt install git
-sudo apt install leafpad
-sudo apt install dnsmap
-sudo apt install ipcalc
-sudo apt install gobuster
-sudo apt install ipcalc
-sudo apt install gedit
-sudo apt install speedtest-cli
-sudo apt install htop
-sudo apt install libcurl4-openssl-dev
-sudo apt install libssl-dev
-sudo apt install jq
-sudo apt install ruby-full
-sudo apt install libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-sudo apt install build-essential libssl-dev libffi-dev python-dev
-sudo apt install libldns-dev
-sudo apt install rename
-sudo apt install xargs
-sudo apt install openssh-server
-sudo apt install apache2
-sudo apt install tor
-sudo apt install macchanger
-sudo apt install awscli
-sudo apt install golang
+apt update
+apt upgrade
+apt install python3-pip
+apt install git
+apt install leafpad
+apt install dnsmap
+apt install ipcalc
+apt install gobuster
+apt install ipcalc
+apt install gedit
+apt install speedtest-cli
+apt install htop
+apt install libcurl4-openssl-dev
+apt install libssl-dev
+apt install jq
+apt install ruby-full
+apt install libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
+apt install build-essential libssl-dev libffi-dev python-dev
+apt install libldns-dev
+apt install rename
+apt install xargs
+apt install openssh-server
+apt install apache2
+apt install tor
+apt install macchanger
+apt install awscli
+apt install golang
+apt dist-upgrade
+dpkg --add-architecture i386
+apt update
+apt install software-properties-common wget
+wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | sudo apt-key add -
+add-apt-repository 'deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./'
+apt install --install-recommends winehq-stable
+apt update
 
 echo "All the libaries and pre tools are downloaded and installed"
 
@@ -83,5 +91,5 @@ banner "Sublime-text"
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 sudo apt-get install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+apt-get update
+apt-get install sublime-text
