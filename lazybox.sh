@@ -71,7 +71,7 @@ apt dist-upgrade
 dpkg --add-architecture i386
 apt update
 apt install software-properties-common wget
-wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | sudo apt-key add -
+wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add -
 add-apt-repository 'deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./'
 apt install --install-recommends winehq-stable
 apt update
@@ -88,8 +88,8 @@ source ~/.zshrc
 echo "Successfully configured the all your alias"
 
 banner "Sublime-text"
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
 sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
 apt-get update
 apt-get install sublime-text
