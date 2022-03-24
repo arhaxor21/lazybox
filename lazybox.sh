@@ -18,15 +18,6 @@ banner() {
 }
 
 
-banner " setting up source file for kali"
-
-echo "deb-src https://http.kali.org/kali kali-rolling main non-free contrib" >/etc/apt/sources.list
-echo "deb https://http.kali.org/kali kali-rolling main non-free contrib" >>/etc/apt/sources.list
-echo "deb https://ftp.harukasan.org/kali kali-rolling main non-free contrib" >>/etc/apt/sources.list
-echo "deb-src https://ftp.harukasan.org/kali kali-rolling main non-free contrib" >>/etc/apt/sources.list
-
-echo "Sources file added"
-
 banner "setting up Resolv config adding"
 
 echo "## OpenDNS ##" >/etc/resolv.conf
@@ -57,10 +48,9 @@ apt install libssl-dev
 apt install jq
 apt install ruby-full
 apt install libxml2 libxml2-dev libxslt1-dev ruby-dev build-essential libgmp-dev zlib1g-dev
-apt install build-essential libssl-dev libffi-dev python-dev
+apt install build-essential libssl-dev libffi-dev
 apt install libldns-dev
 apt install rename
-apt install xargs
 apt install openssh-server
 apt install apache2
 apt install tor
@@ -68,13 +58,6 @@ apt install macchanger
 apt install awscli
 apt install golang
 apt dist-upgrade
-dpkg --add-architecture i386
-apt update
-apt install software-properties-common wget
-wget -O- -q https://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10/Release.key | apt-key add -
-add-apt-repository 'deb http://download.opensuse.org/repositories/Emulators:/Wine:/Debian/Debian_10 ./'
-apt install --install-recommends winehq-stable
-apt update
 
 echo "All the libaries and pre tools are downloaded and installed"
 
