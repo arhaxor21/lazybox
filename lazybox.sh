@@ -31,6 +31,7 @@ echo "Resolv config added"
 
 banner "updating linux and packages"
 
+apt remove burpsuite
 apt update
 apt upgrade
 apt install python3-pip
@@ -69,10 +70,5 @@ cat zshrc > ~/.zshrc
 source ~/.bashrc
 source ~/.zshrc
 echo "Successfully configured the all your alias"
-
-banner "Sublime-text"
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add -
-sudo apt-get install apt-transport-https
-echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list
-apt-get update
-apt-get install sublime-text
+banner " setup link"
+echo "https://drive.google.com/file/d/1JcTYpCIlAaStGcrnezu4k-Z51pw0ALvG/view?usp=sharing"
